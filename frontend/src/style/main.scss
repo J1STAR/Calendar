@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+}
+
+.main {
+  .week {
+    display: flex;
+  }
+
+  .week,
+  .dates {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .day,
+    .date {
+      text-align: center;
+      width: calc(100% / 7);
+    }
+  }
+}
