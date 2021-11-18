@@ -7,12 +7,58 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: orangered;
+  margin-bottom: 1em;
+}
+
+.header .prevBtn {
+  background-image: url("../assets/left-arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.5em;
+}
+
+.header .prevBtn:hover {
+  cursor: pointer;
+}
+
+.header .nextBtn {
+  background-image: url("../assets/right-arrow.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.5em;
+}
+
+.header .nextBtn:hover {
+  cursor: pointer;
+}
+
+.main {
+  border: 1px solid lightgray;
 }
 
 .main .week {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.main .week .day {
+  background-color: gray;
+  color: white;
+  border: 1px solid lightgray;
 }
 
 .main .week,

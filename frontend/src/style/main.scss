@@ -4,11 +4,55 @@
 
 .header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: orangered;
+  margin-bottom: 1em;
+
+  .prevBtn {
+    background: {
+      image: url("../assets/left-arrow.png");
+      repeat: no-repeat;
+      size: cover;
+    }
+    width: 1em;
+    height: 1em;
+    margin: 0 0.5em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .nextBtn {
+    background: {
+      image: url("../assets/right-arrow.png");
+      repeat: no-repeat;
+      size: cover;
+    }
+    width: 1em;
+    height: 1em;
+    margin: 0 0.5em;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .main {
+  border: 1px solid lightgray;
+
   .week {
     display: flex;
+
+    .day {
+      background-color: gray;
+      color: white;
+      border: 1px solid lightgray;
+    }
   }
 
   .week,

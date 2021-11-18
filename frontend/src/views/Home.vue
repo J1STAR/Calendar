@@ -1,11 +1,11 @@
 <template>
   <div class="calender">
     <div class="header">
-      <button class="prevBtn" @click="prevMonth">지난달</button>
+      <div class="prevBtn" @click="prevMonth"></div>
       <div class="title">
-        <span class="calYear"></span>년 <span class="calMonth"></span>월
+        <span class="calYear"></span><span class="calMonth"></span>
       </div>
-      <button class="nextBtn" @click="nextMonth">다음달</button>
+      <div class="nextBtn" @click="nextMonth"></div>
     </div>
     <div class="main">
       <div class="week">
@@ -41,7 +41,7 @@ export default {
       let currentFirst = new Date(today.getFullYear(), today.getMonth(), 1); // 이번달의 첫번째 날
       let currentLast = new Date(today.getFullYear(), today.getMonth() + 1, 0); // 이번달의 마지막 날
 
-      document.querySelector(".calYear").innerHTML = today.getFullYear();
+      document.querySelector(".calYear").innerHTML = today.getFullYear() + ".";
       document.querySelector(".calMonth").innerHTML = today.getMonth() + 1;
 
       let dates = []; // 달력에 출력될 날 배열
