@@ -19,18 +19,25 @@
       </div>
       <div class="dates"></div>
     </div>
+    <Modal v-if="showModal" :modalData="modalData" @close="closeModal"></Modal>
   </div>
 </template>
 
 <script>
 import axios from "../lib/axios";
-import { onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import "../style/main.css";
+import Modal from "./components/Modal.vue";
 
 export default {
   name: "Home",
+  components: {
+    Modal,
+  },
 
   setup() {
+    var showModal = ref(false);
+    var modalData = ref(null);
     var today = new Date();
     var dataset = null;
 
@@ -182,11 +189,16 @@ export default {
         if (eventlist.length != 0) {
           for (let j = 0; j < eventlist.length; j++) {
             eventlist[j].addEventListener("click", function () {
-              console.log(dataset.data[i]);
+              showModal.value = true;
+              modalData.value = dataset.data[i];
             });
           }
         }
       }
+    };
+
+    const closeModal = () => {
+      showModal.value = false;
     };
 
     const prevMonth = () => {
@@ -200,7 +212,10 @@ export default {
     };
 
     return {
+      showModal,
+      modalData,
       onMounted,
+      closeModal,
       prevMonth,
       nextMonth,
     };

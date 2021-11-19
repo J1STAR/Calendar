@@ -1,5 +1,11 @@
 * {
   box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+
+.calender {
+  position: relative;
 }
 
 .header {
@@ -103,6 +109,51 @@
           max-height: 1em;
           max-height: 1.5em;
         }
+      }
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .modal-inner {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+
+    .close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+    }
+
+    .modal-header {
+      height: 20%;
+      width: 100%;
+      display: flex;
+    }
+
+    .modal-mid {
+      height: 80%;
+      width: 100%;
+      overflow: auto;
+
+      .modal-content > p > img {
+        width: 100% !important;
+        height: 100% !important;
       }
     }
   }

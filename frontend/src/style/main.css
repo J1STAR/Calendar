@@ -1,6 +1,12 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 0;
+  margin: 0;
+}
+
+.calender {
+  position: relative;
 }
 
 .header {
@@ -127,5 +133,63 @@
   margin: 0 0.2em;
   max-height: 1em;
   max-height: 1.5em;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal .modal-inner {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal .modal-inner .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.modal .modal-inner .modal-header {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .modal-inner .modal-mid {
+  height: 80%;
+  width: 100%;
+  overflow: auto;
+}
+
+.modal .modal-inner .modal-mid .modal-content > p > img {
+  width: 100% !important;
+  height: 100% !important;
 }
 /*# sourceMappingURL=main.css.map */
