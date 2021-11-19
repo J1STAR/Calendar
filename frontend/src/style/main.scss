@@ -66,5 +66,44 @@
       text-align: center;
       width: calc(100% / 7);
     }
+
+    .date {
+      min-height: 7em;
+
+      .daynum {
+        background-color: rgb(245, 240, 240);
+      }
+
+      .dayin {
+        display: flex;
+        margin: 0.2em 0;
+        text-align: start;
+
+        .start_icon {
+          display: block;
+          background-color: rgb(255, 123, 0);
+          color: #ffffff;
+          border-radius: 5px;
+          font-size: 0.8em;
+          padding: 0.1em;
+          width: fit-content;
+          margin: 0 0.2em;
+          max-height: 1.5em;
+        }
+
+        .end_icon {
+          display: block;
+          background-color: rgb(25, 25, 71);
+          color: #ffffff;
+          border-radius: 5px;
+          font-size: 0.8em;
+          padding: 0.1em;
+          width: fit-content;
+          margin: 0 0.2em;
+          max-height: 1em;
+          max-height: 1.5em;
+        }
+      }
+    }
   }
 }

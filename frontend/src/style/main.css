@@ -78,4 +78,54 @@
   text-align: center;
   width: calc(100% / 7);
 }
+
+.main .week .date,
+.main .dates .date {
+  min-height: 7em;
+}
+
+.main .week .date .daynum,
+.main .dates .date .daynum {
+  background-color: #f5f0f0;
+}
+
+.main .week .date .dayin,
+.main .dates .date .dayin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.2em 0;
+  text-align: start;
+}
+
+.main .week .date .dayin .start_icon,
+.main .dates .date .dayin .start_icon {
+  display: block;
+  background-color: #ff7b00;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 0.1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0.2em;
+  max-height: 1.5em;
+}
+
+.main .week .date .dayin .end_icon,
+.main .dates .date .dayin .end_icon {
+  display: block;
+  background-color: #191947;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 0.8em;
+  padding: 0.1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0.2em;
+  max-height: 1em;
+  max-height: 1.5em;
+}
 /*# sourceMappingURL=main.css.map */
