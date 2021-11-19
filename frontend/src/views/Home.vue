@@ -143,6 +143,7 @@ export default {
 
       document.querySelector(".dates").innerHTML = htmlDates;
       settingData();
+      addModalEvent();
     };
 
     const settingData = () => {
@@ -155,7 +156,7 @@ export default {
 
         if (searchstartday != null) {
           searchstartday.innerHTML +=
-            `<div class="dayin"><span class="start_icon">시</span>` +
+            `<div class="dayin ${dataset.data[i].id}"><span class="start_icon">시</span>` +
             dataset.data[i].name +
             `</div>`;
         }
@@ -168,9 +169,22 @@ export default {
         const searchendday = document.getElementById(searchend);
         if (searchendday != null) {
           searchendday.innerHTML +=
-            `<div class="dayin"><span class="end_icon">끝</span>` +
+            `<div class="dayin ${dataset.data[i].id}"><span class="end_icon">끝</span>` +
             dataset.data[i].name +
             `</div>`;
+        }
+      }
+    };
+
+    const addModalEvent = () => {
+      for (let i = 0; i < 200; i++) {
+        var eventlist = document.getElementsByClassName(dataset.data[i].id);
+        if (eventlist.length != 0) {
+          for (let j = 0; j < eventlist.length; j++) {
+            eventlist[j].addEventListener("click", function () {
+              console.log(dataset.data[i]);
+            });
+          }
         }
       }
     };
