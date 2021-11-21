@@ -7,9 +7,10 @@
 
 .calender {
   position: relative;
+  height: 100%;
 }
 
-.header {
+.top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,10 +23,14 @@
   font-size: 20px;
   font-weight: 700;
   color: orangered;
-  margin-bottom: 1em;
+  padding: 0.5em 0;
 }
 
-.header .prevBtn {
+.top .title {
+  font-size: 1.2em;
+}
+
+.top .prevBtn {
   background-image: url("../assets/left-arrow.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,11 +39,11 @@
   margin: 0 0.5em;
 }
 
-.header .prevBtn:hover {
+.top .prevBtn:hover {
   cursor: pointer;
 }
 
-.header .nextBtn {
+.top .nextBtn {
   background-image: url("../assets/right-arrow.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,7 +52,7 @@
   margin: 0 0.5em;
 }
 
-.header .nextBtn:hover {
+.top .nextBtn:hover {
   cursor: pointer;
 }
 
@@ -135,6 +140,11 @@
   max-height: 1.5em;
 }
 
+.main .week .date .dayin:hover,
+.main .dates .date .dayin:hover {
+  cursor: pointer;
+}
+
 .modal {
   position: absolute;
   top: 0;
@@ -155,8 +165,8 @@
 
 .modal .modal-inner {
   position: relative;
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 80%;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,21 +179,60 @@
 
 .modal .modal-inner .close-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.5em;
+  right: 0.5em;
   z-index: 1000;
 }
 
+.modal .modal-inner .close-btn:hover {
+  cursor: pointer;
+}
+
 .modal .modal-inner .modal-header {
-  height: 20%;
+  height: 15%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.modal .modal-inner .modal-header .modal-image {
+  width: 18%;
+  padding: 0.5em;
+  margin-right: 0.8em;
+}
+
+.modal .modal-inner .modal-header .modal-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5em 0;
+}
+
+.modal .modal-inner .modal-header .modal-info .modal-name {
+  margin: 0.3em;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.modal .modal-inner .modal-header .modal-info .modal-time {
+  margin: 0.3em;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
 .modal .modal-inner .modal-mid {
-  height: 80%;
+  height: 85%;
   width: 100%;
   overflow: auto;
 }

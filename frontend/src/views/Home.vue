@@ -1,6 +1,6 @@
 <template>
   <div class="calender">
-    <div class="header">
+    <div class="top">
       <div class="prevBtn" @click="prevMonth"></div>
       <div class="title">
         <span class="calYear"></span><span class="calMonth"></span>
