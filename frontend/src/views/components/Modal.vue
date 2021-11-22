@@ -1,13 +1,15 @@
 <template>
   <div class="modal">
     <div class="modal-inner">
-      <div @click="close" class="close-btn">X</div>
+      <div @click="close" class="close-btn"></div>
       <div class="modal-header">
         <img class="modal-image" :src="modalData.image" />
         <div class="modal-info">
           <span class="modal-name">{{ modalData.name }}</span>
-          <span class="modal-time">{{ start_time }} ~ {{ end_time }}</span>
-          <span>{{ minus_date }}</span>
+          <div>
+            <span class="modal-time">{{ start_time }} ~ {{ end_time }}</span>
+            <span class="modal-dday">({{ minus_date }})</span>
+          </div>
         </div>
       </div>
       <div class="modal-mid">
